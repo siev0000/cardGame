@@ -268,15 +268,15 @@
 
 /* ステータスアイコンのスタイル */
 .card-stat-icon {
-    width: 20%;
-    height: 20%;
+    width: 200%;
+    height: 200%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 250%;
     font-weight: 600;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
@@ -287,22 +287,20 @@
 /* ステータスアイコンの光るエフェクト */
 .card-hp {
     background-image: url('images/heart.png'); /* ハートアイコン */
-    box-shadow: 0 0 8px 4px rgba(0, 255, 0, 0.5); /* 緑色の光のエフェクト */
+    box-shadow: 0 0 10px 4px rgba(0, 255, 0, 0.5); /* 緑色の光のエフェクト */
 }
 
 .card-defense {
     background-image: url('images/shield.png'); /* 盾アイコン */
-    box-shadow: 0 0 8px 4px rgba(0, 0, 255, 0.5); /* 青色の光のエフェクト */
+    margin-right: 10px; /* 攻撃との間にスペースを追加 */
 }
 
 .card-attack {
     background-image: url('images/sword.png'); /* 剣アイコン */
-    box-shadow: 0 0 8px 4px rgba(255, 0, 0, 0.5); /* 赤色の光のエフェクト */
 }
 
 .card-magic {
     background-image: url('images/magic.png'); /* 魔法陣アイコン */
-    box-shadow: 0 0 8px 4px rgba(128, 0, 128, 0.5); /* 紫色の光のエフェクト */
 }
 
 /* レアリティに応じたカードの色 */

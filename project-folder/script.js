@@ -26,6 +26,7 @@ function createCard(cardData) {
             <div class="card-magic card-stat-icon">${cardData.magic}</div>
         </div>
     `;
+    // .card-hp
     cardElement.dataset.description = cardData.description;
 
     // カードの説明表示

@@ -22,8 +22,7 @@
             
             <!-- 左側エリア（デッキ、手札、墓地） -->
             <div class="left-area">
-                <!-- エリアタイトルを表示する要素 -->
-                <div id="area-title" class="area-title">手札</div>
+                
                 <!-- コントロールパネル -->
                 <div id="control-panel">
                     <button onclick="showArea('deck')">デッキ</button>
@@ -31,6 +30,10 @@
                     <button onclick="showArea('graveyard')">墓地</button>
                     <button onclick="drawCard()">カードを引く</button>
                 </div>
+                <p></p>
+
+                <!-- エリアタイトルを表示する要素 -->
+                <div id="area-title" class="area-title">手札</div>
 
                 <!-- スクロール可能なデッキ、手札、墓地エリアのコンテナ -->
                 <div class="left-area-scroll-container">
