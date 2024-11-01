@@ -79,7 +79,6 @@
     flex: 3.5;
     border: 2px solid #ccc;
     border-radius: 8px;
-    padding: 2%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     display: flex;
@@ -90,16 +89,19 @@
 
 /* ダミーエリアのスタイル */
 .drop-area {
-    width: 100%;
+    width: 95%;
+    height: 10%;
     border: 2px dashed #888;
     border-radius: 8px;
     text-align: center;
-    padding: 5%;
+    /* Flexbox を使用してテキストを中央に配置 */
+    display: flex;
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
     cursor: pointer;
     color: #555;
     font-weight: bold;
-    margin-bottom: 5%;
-    font-size: 1vw;
+    font-size: 200%;
 }
 
 /* カードの基本スタイル */
@@ -118,7 +120,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     transition: transform 0.2s;
     font-size: 0.8vw;
 }
@@ -184,27 +185,19 @@
         font-size: 0.8em;
     }
 }
-
-/* カードの名前 */
-.card-name {
-    font-size: 1vw;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2% 5%;
-    border-radius: 8px;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+.popup-description{
+    width: 100%;
+    height: 35%;
 }
-
 /* カードの説明 */
 .card-description {
+    width: 100%;
+    height: 35%;
     font-size: 0.8vw;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 4%;
     border-radius: 4px;
-    text-align: center;
-    max-height: 4em;
+    text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
@@ -220,12 +213,11 @@
 
 /* カードの名前部分 */
 .card-name {
-    font-size: 15px;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.6); /* 半透明の背景で視認性を向上 */
-    padding: 4px 8px;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2% 5%;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 3%;
     width: 85%;
     text-align: left;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
@@ -236,14 +228,13 @@
 /* コストアイコン */
 .card-cost {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 2%;
+    right: 2%;
     color: black;
     background-color: #FFC107; /* 濃いめの黄色背景 */
     border-radius: 50%;
-    padding: 4px 8px;
-    font-weight: 700; /* 太めに設定 */
-    font-size: 15px;
+    padding: 3% 6%;
+    font-size: 250%;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* 白い文字の影でコントラストを強化 */
 }
 
@@ -287,7 +278,6 @@
 /* ステータスアイコンの光るエフェクト */
 .card-hp {
     background-image: url('images/heart.png'); /* ハートアイコン */
-    box-shadow: 0 0 10px 4px rgba(0, 255, 0, 0.5); /* 緑色の光のエフェクト */
 }
 
 .card-defense {
