@@ -1,0 +1,132 @@
+
+/* カードの基本スタイル */
+.card {
+    position: relative;
+    width: 120px;
+    height: 220px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* カードの名前部分 */
+.card-name {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明の背景で視認性を向上 */
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 85%;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* 黒い文字の影 */
+}
+
+/* コストアイコン */
+.card-cost {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: black;
+    background-color: #FFC107; /* 濃いめの黄色背景 */
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-weight: 700; /* 太めに設定 */
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* 白い文字の影でコントラストを強化 */
+}
+
+/* 中央画像 */
+.card-image {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ステータスアイコンの配置 */
+.card-stats {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* ステータスアイコンのスタイル */
+.card-stat-icon {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* ステータスアイコンの光るエフェクト */
+.card-hp {
+    background-image: url('images/heart.png'); /* ハートアイコン */
+    box-shadow: 0 0 8px 4px rgba(0, 255, 0, 0.5); /* 緑色の光のエフェクト */
+}
+
+.card-defense {
+    background-image: url('images/shield.png'); /* 盾アイコン */
+    box-shadow: 0 0 8px 4px rgba(0, 0, 255, 0.5); /* 青色の光のエフェクト */
+}
+
+.card-attack {
+    background-image: url('images/sword.png'); /* 剣アイコン */
+    box-shadow: 0 0 8px 4px rgba(255, 0, 0, 0.5); /* 赤色の光のエフェクト */
+}
+
+.card-magic {
+    background-image: url('images/magic.png'); /* 魔法陣アイコン */
+    box-shadow: 0 0 8px 4px rgba(128, 0, 128, 0.5); /* 紫色の光のエフェクト */
+}
+
+/* レアリティに応じたカードの色 */
+.card-bronze {
+    background-color: #b87333 !important; /* ブロンズ（暗めの銅色） */
+}
+
+.card-silver {
+    background-color: #b0b0b0 !important; /* シルバー（暗めの銀色） */
+}
+
+.card-gold {
+    background-color: #d4af37 !important; /* ゴールド（暗めの金色） */
+}
+
+.card-platinum {
+    background-color: #009acd !important; /* プラチナ（暗めの水色） */
+}
+
+.card-black {
+    background-color: #2f2f2f !important;
+    color: white;
+}

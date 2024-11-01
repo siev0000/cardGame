@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カードゲームアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>カードゲームアプリ</h1>
+
+    <div class="container">
+        <!-- メインエリア -->
+        <div class="main-area">
+            <!-- 場エリア -->
+            <p>場（最大6枚）</p>
+            <div id="field" class="area drop-area"></div>
+        </div>
+
+        <!-- 下部の左右エリア配置 -->
+        <div class="lower-container">
+            
+            <!-- 左側エリア（デッキ、手札、墓地） -->
+            <div class="left-area">
+                <!-- エリアタイトルを表示する要素 -->
+                <div id="area-title" class="area-title">手札</div>
+                <!-- コントロールパネル -->
+                <div id="control-panel">
+                    <button onclick="showArea('deck')">デッキ</button>
+                    <button onclick="showArea('hand')">手札</button>
+                    <button onclick="showArea('graveyard')">墓地</button>
+                    <button onclick="drawCard()">カードを引く</button>
+                </div>
+
+                <!-- スクロール可能なデッキ、手札、墓地エリアのコンテナ -->
+                <div class="left-area-scroll-container">
+                    <div id="deck" class="area"></div>
+                    <div id="hand" class="area" style="display: none;"></div>
+                    <div id="graveyard" class="area" style="display: none;"></div>
+                </div>
+            </div>
+
+
+            <!-- 右サイドバー -->
+            <div class="sidebar">
+                <!-- カード説明のポップアップウィンドウ -->
+                <div id="popup" class="popup">
+                    <p id="popup-description"></p>
+                </div>
+
+                <!-- 縦に並べたダミードロップエリア -->
+                <div id="drop-to-field" class="drop-area">場に移動</div>
+                <div id="drop-to-deck" class="drop-area">デッキに移動</div>
+                <div id="drop-to-hand" class="drop-area">手札に移動</div>
+                <div id="drop-to-graveyard" class="drop-area">墓地に移動</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
